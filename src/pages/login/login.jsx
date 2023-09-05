@@ -1,25 +1,8 @@
 import "./login.css";
 import waves from "../../assets/Vectors.svg";
 import logo from "../../assets/logo-group.svg";
+import Inputs from "./Inputs";
 
-const options = [
-  {
-    newId: 1,
-    id: "personalNo.",
-    type: "text",
-    labelName: "Enter your Personal No. ",
-    placeholder: "Enter your Personal No. ",
-    for: "personalNo.",
-  },
-  {
-    newId: 2,
-    id: "password",
-    type: "password",
-    labelName: "Enter your Password ",
-    placeholder: "Enter your Personal No. ",
-    for: "password",
-  },
-];
 function Login() {
   return (
     <div className="login">
@@ -31,15 +14,7 @@ function Login() {
               Sign in and start generating your reports!
             </span>
             <div className="inputs">
-              <input
-                type="text"
-                id="personalNo"
-                class="form__field"
-                placeholder="Enter Personal No."
-              />
-              <label for="personalNo" class="form__label">
-                Enter Personal No.
-              </label>
+              <Inputs />
             </div>
             <button className="loginBtn">Login</button>
           </form>
