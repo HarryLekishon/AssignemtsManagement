@@ -1,0 +1,42 @@
+.nav {
+  width: 15vw;
+  height: 100vh;
+  background-color: antiquewhite;
+}
+
+.top {
+  height: 6.5%;
+}
+.nav-logo {
+  margin: 0 5px;
+}
+.bottom {
+  height: 93.5%;
+  display: flex;
+  justify-content: center;
+}
+.linkContainer {
+  margin: 5em 0;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.listItem:hover {
+  background-color: red;
+}

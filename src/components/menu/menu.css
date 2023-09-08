@@ -1,0 +1,17 @@
+.menu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+}
+
+.logoutBtn {
+  margin: 0 10px;
+  /* padding: 5px; */
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}

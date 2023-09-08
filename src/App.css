@@ -12,3 +12,16 @@ a {
 link {
   text-decoration: none;
 }
+
+.main {
+  display: flex;
+}
+
+.container {
+  width: 85vw;
+}
+
+.menuContainer {
+  background: #ee0000;
+  height: 50px;
+}
