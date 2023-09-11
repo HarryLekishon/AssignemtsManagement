@@ -1,6 +1,6 @@
 import "./navbar.css";
 import kralogo from "../../assets/KRA.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { menu } from "../../data/data";
 
 function Navbar() {
@@ -15,10 +15,14 @@ function Navbar() {
             <div className="item" key={item.id}>
               <span className="title">{item.title}</span>
               {item.listItems.map((listItem) => (
-                <Link to={listItem.url} className="listItem" key={listItem.id}>
-                  {/* <img src={listItem.icon} alt="" /> */}
+                <NavLink
+                  to={listItem.url}
+                  className="listItem"
+                  key={listItem.id}
+                >
+                  <img src={listItem.icon} alt="" />
                   <span className="listItemTitle">{listItem.title}</span>
-                </Link>
+                </NavLink>
               ))}
             </div>
           ))}
