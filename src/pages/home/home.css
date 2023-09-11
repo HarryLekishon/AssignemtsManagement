@@ -1,54 +1,65 @@
 .homecontainer {
-    background-color: #FAF9F6;
+  background-color: #faf9f6;
 }
 
 .home {
-    font-size: 32px;
-    font-family: Iniria sans-serif;
-    font-weight: 400;
-    line-height: normal;
-    color: #000;
-    font-style: normal;
-    margin-left: 24px;
-    
+  font-size: 32px;
+  font-family: Iniria sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+  font-style: normal;
+  margin-left: 24px;
 }
-.home >p {
-    padding-top: 10px;
+.home > p {
+  padding-top: 10px;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    width: 95%;
-    margin: auto;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 95%;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .grid div {
-    width: 207.117px;;
-    height: 106px;
-    background-color: red;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    
+  width: 207.117px;
+  height: 106px;
+  background-color: red;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
 }
 .cardContent {
-    display: flex;
-    gap: 20px;
-    align-items: end;
-    padding: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: end;
+  padding: 10px;
 }
 .cardContent p {
-    color: #000;
-    font-family: PT serif;
-    font-size: 18PX;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: #000;
+  font-family: PT serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.chartsBox {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+.chartTop {
+  display: flex;
+}
+.chartBottom {
+  display: flex;
+  flex-direction: column;
 }
