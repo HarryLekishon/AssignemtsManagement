@@ -1,3 +1,11 @@
+import dashIcon from "../assets/icons/Group.svg";
+import compaintsIcon from "../assets/icons/complaints.svg";
+import requestsIcon from "../assets/icons/serv-requests.svg";
+import bugsIcon from "../assets/icons/bugs.svg";
+import enhanceIcon from "../assets/icons/enhancement.svg";
+import reportIcon from "../assets/icons/report.svg";
+import faqIcon from "../assets/icons/help.svg";
+
 export const menu = [
   {
     id: 1,
@@ -7,7 +15,7 @@ export const menu = [
         id: 1,
         title: "Dashboard",
         url: "/",
-        //   icon: "dashboard.svg",
+        icon: dashIcon,
       },
       // {
       //   id: 2,
@@ -25,21 +33,25 @@ export const menu = [
         id: 1,
         title: "Customer Complaints",
         url: "/",
+        icon: compaintsIcon,
       },
       {
         id: 2,
         title: "Service Requests",
         url: "/",
+        icon: requestsIcon,
       },
       {
         id: 3,
         title: "System Bugs & Errors",
         url: "/",
+        icon: bugsIcon,
       },
       {
         id: 4,
         title: "System Enhancements",
         url: "/",
+        icon: enhanceIcon,
       },
     ],
   },
@@ -51,6 +63,7 @@ export const menu = [
         id: 1,
         title: "My Reports",
         url: "/",
+        icon: reportIcon,
       },
     ],
   },
@@ -62,6 +75,7 @@ export const menu = [
         id: 1,
         title: "FAQs",
         url: "/",
+        icon: faqIcon,
       },
     ],
   },

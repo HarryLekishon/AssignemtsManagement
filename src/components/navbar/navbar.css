@@ -29,14 +29,18 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-
-.listItem {
+.item > a {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
   border-radius: 5px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.listItem:hover {
-  background-color: #fad4d4;
+.item > a:hover {
+  background-color: #f6635cb2;
+  color: white;
 }
