@@ -2,10 +2,14 @@
   width: 15vw;
   height: 100vh;
   background-color: antiquewhite;
+  position: sticky;
+  top: 0;
 }
 
 .top {
   height: 6.5%;
+  position: sticky;
+  top: 0;
 }
 .nav-logo {
   margin: 0 5px;
