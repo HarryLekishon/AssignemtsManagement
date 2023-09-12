@@ -38,19 +38,19 @@ export const menu = [
       {
         id: 2,
         title: "Service Requests",
-        url: "/",
+        url: "/service-requests",
         icon: requestsIcon,
       },
       {
         id: 3,
         title: "System Bugs & Errors",
-        url: "/",
+        url: "/system-bugs-&-errors",
         icon: bugsIcon,
       },
       {
         id: 4,
         title: "System Enhancements",
-        url: "/",
+        url: "/system-enhancements",
         icon: enhanceIcon,
       },
     ],
@@ -62,7 +62,7 @@ export const menu = [
       {
         id: 1,
         title: "My Reports",
-        url: "/",
+        url: "/reports",
         icon: reportIcon,
       },
     ],
