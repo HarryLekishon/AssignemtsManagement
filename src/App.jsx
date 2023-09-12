@@ -4,6 +4,7 @@ import Login from "./pages/login/login";
 import Navbar from "./components/navbar/Navbar";
 import Menu from "./components/menu/Menu";
 import Home from "./pages/home/Home";
+import Complaints from "./pages/complaints/Complaints";
 
 function App() {
   const Layout = () => {
@@ -30,6 +31,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/customer-complaints",
+          element: <Complaints />,
         },
       ],
     },

@@ -32,7 +32,7 @@ export const menu = [
       {
         id: 1,
         title: "Customer Complaints",
-        url: "/",
+        url: "/customer-complaints",
         icon: compaintsIcon,
       },
       {
@@ -78,5 +78,59 @@ export const menu = [
         icon: faqIcon,
       },
     ],
+  },
+];
+
+export const CustomerComplaints = [
+  {
+    id: 1,
+    serviceRequest: "S2023_646722",
+    classDescription: "ICMS",
+    details: "Jane Smith  was unable to reset iCMS password",
+    status: "new",
+    internalPriority: "05",
+    source: "EMAIL",
+    summary: "Complaint. Staff was unable to reset password",
+  },
+  {
+    id: 2,
+    serviceRequest: "S2023_646722",
+    classDescription: "ICMS",
+    details: "New User creation",
+    status: "Resolved",
+    internalPriority: "05",
+    source: "EMAIL",
+    summary: "Complaint. Stuck at user id generation",
+  },
+  {
+    id: 3,
+    serviceRequest: "S2023_646724",
+    classDescription: "ICMS",
+    details: "John Palaka  was unable to login to iCMS",
+    status: "Queued",
+    internalPriority: "05",
+    source: "EMAIL",
+    summary: "Complaint. User was unable to login",
+  },
+  {
+    id: 4,
+    serviceRequest: "S2023_646721",
+    classDescription: "ICMS",
+    details:
+      "CSAP000619117TD - Kindly assist by sending reset password link for the above account.",
+    status: "new",
+    internalPriority: "05",
+    source: "EMAIL",
+    summary: "Complaint. system is not sending password change link",
+  },
+  {
+    id: 5,
+    serviceRequest: "S2023_646723",
+    classDescription: "ICMS",
+    details: "Jane Smith  was unable to reset iCMS password",
+    status: "Queued",
+    internalPriority: "05",
+    source: "EMAIL",
+    summary: "Complaint. Staff was unable to reset password",
   },
 ];
