@@ -1,0 +1,11 @@
+.Complaints {
+  margin: 40px;
+}
+.complaintsTitle {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 133.333% */
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}

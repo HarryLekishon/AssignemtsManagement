@@ -11,7 +11,7 @@ const PieChartBox = ({ type }) => {
   return (
     <div className="pieChartBox">
       <h1>Issue Resolution {type}</h1>
-      <div className="chartBottom">
+      <div className="pieChartContainer">
         <div className="chart">
           <ResponsiveContainer width="99%" height={300}>
             <PieChart>

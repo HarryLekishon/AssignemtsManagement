@@ -1,7 +1,8 @@
 .nav {
   width: 15vw;
   height: 100vh;
-  background-color: antiquewhite;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   position: sticky;
   top: 0;
 }
@@ -10,9 +11,13 @@
   height: 6.5%;
   position: sticky;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-logo {
-  margin: 0 5px;
+  width: 90%;
+  padding: 40px 0 0 0;
 }
 .bottom {
   height: 93.5%;
