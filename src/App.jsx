@@ -5,6 +5,11 @@ import Navbar from "./components/navbar/Navbar";
 import Menu from "./components/menu/Menu";
 import Home from "./pages/home/Home";
 import Complaints from "./pages/complaints/Complaints";
+import ServiceRequests from "./pages/service-requests/ServiceRequests";
+import SystemBugsErrors from "./pages/SystemBugs&Errors/SystemBugs&Errors";
+import SystemEnhancements from "./pages/system-enhancements/SystemEnhancements";
+import Reports from "./pages/Reports/Reports";
+import Report from "./pages/Report/Report";
 
 function App() {
   const Layout = () => {
@@ -35,6 +40,26 @@ function App() {
         {
           path: "/customer-complaints",
           element: <Complaints />,
+        },
+        {
+          path: "/service-requests",
+          element: <ServiceRequests />,
+        },
+        {
+          path: "/system-bugs-&-errors",
+          element: <SystemBugsErrors />,
+        },
+        {
+          path: "/system-enhancements",
+          element: <SystemEnhancements />,
+        },
+        {
+          path: "/reports",
+          element: <Reports />,
+        },
+        {
+          path: "/reports/:id",
+          element: <Report />,
         },
       ],
     },

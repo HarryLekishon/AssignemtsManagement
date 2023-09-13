@@ -6,7 +6,7 @@ import Inputs from "./Inputs";
 function Login() {
   return (
     <div className="login">
-      <div className="top">
+      <div className="loginTop">
         <div className="left">
           <form action="post" className="form-container">
             <p className="header">Sign in</p>

@@ -12,6 +12,11 @@
   gap: 15px;
 }
 .MuiDataGrid-columnHeaders {
-  background: black;
+  background: rgb(56, 56, 56);
   color: white;
+}
+.MuiDataGrid-columnHeaders:hover {
+  transition: 0.8s ease-in-out;
+  background: white;
+  color: black;
 }

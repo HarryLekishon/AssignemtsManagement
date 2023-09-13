@@ -1,15 +1,16 @@
 import React from "react";
-import "./complaints.css";
+import "./systemEnhancements.css";
 import { GridColDef } from "@mui/x-data-grid";
-import { CustomerComplaints } from "../../data/data";
+import { SysEnhancements } from "../../data/data";
 import DataTable from "../../components/datatable/DataTable";
+
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
 
   {
     field: "serviceRequest",
     type: "string",
-    headerName: "Service Requests",
+    headerName: "Service Request",
     width: 150,
   },
   {
@@ -38,29 +39,29 @@ const columns: GridColDef[] = [
   },
   {
     field: "source",
+    type: "string",
     headerName: "Source",
     width: 75,
-    type: "string",
   },
   {
     field: "summary",
+    type: "string",
     headerName: "Summary",
     width: 350,
-    type: "string",
   },
 ];
 
-function Complaints() {
+function SystemEnhancements() {
   return (
     <div className="Complaints">
-      <p className="complaintsTitle">Customer Complaints</p>
+      <p className="complaintsTitle">System Enhancements</p>
       <DataTable
         slug="Customer Complaints"
         columns={columns}
-        rows={CustomerComplaints}
+        rows={SysEnhancements}
       />
     </div>
   );
 }
 
-export default Complaints;
+export default SystemEnhancements;
