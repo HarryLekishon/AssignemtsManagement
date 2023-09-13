@@ -3,7 +3,7 @@
   height: 100vh;
   overflow: hidden;
 }
-.top {
+.loginTop {
   height: 88vh;
   display: flex;
 }

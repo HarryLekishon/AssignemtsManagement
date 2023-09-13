@@ -1,13 +1,27 @@
+import { useRef } from "react";
 import HomeBarChart from "../../components/barCharts/HomeBarChart";
 import HomeCard from "../../components/cards/homeCard";
 import PieChartBox from "../../components/piechart/PieChartBox";
 import "./home.css";
 
 function Home() {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+
+  const handleClick = () => {
+    ref1.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleClick2 = () => {
+    ref2.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="homecontainer">
       <div className="home">
         <p>Welcome, John Doe</p>
+        <div className="rateBtn">
+          <button onClick={handleClick}>resolution rate</button>
+          <button onClick={handleClick2}>compliance rate</button>
+        </div>
       </div>
 
       <div className="grid">
@@ -26,7 +40,12 @@ function Home() {
           </div>
           <div className="barCharts">
             {" "}
-            <HomeBarChart title="Issue resolution by compliance rate" />
+            <span ref={ref1}>
+              <HomeBarChart title="Resolution rate" />
+            </span>
+            <span ref={ref2}>
+              <HomeBarChart title="compliance rate" />
+            </span>
           </div>
         </div>
       </div>

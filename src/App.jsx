@@ -9,6 +9,7 @@ import ServiceRequests from "./pages/service-requests/ServiceRequests";
 import SystemBugsErrors from "./pages/SystemBugs&Errors/SystemBugs&Errors";
 import SystemEnhancements from "./pages/system-enhancements/SystemEnhancements";
 import Reports from "./pages/Reports/Reports";
+import Report from "./pages/Report/Report";
 
 function App() {
   const Layout = () => {
@@ -55,6 +56,10 @@ function App() {
         {
           path: "/reports",
           element: <Reports />,
+        },
+        {
+          path: "/reports/:id",
+          element: <Report />,
         },
       ],
     },
