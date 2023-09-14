@@ -8,6 +8,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import "./homeBarChart.css";
 
 const data = [
   {
@@ -113,47 +114,46 @@ const renderQuarterTick = (tickProps) => {
 };
 function HomeBarChart({ title }) {
   return (
-    <div style={{ height: "50em" }}>
-      <p style={{ fontSize: "20px", fontWeight: "600", marginBottom: "1em" }}>
-        {title}
-      </p>
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart
-          width={500}
-          height={300}
-          data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
+    <>
+      <div className="chartContainer">
+        <p
+          style={{
+            fontSize: "20px",
+            fontWeight: "600",
+            marginBottom: "1em",
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="date" tickFormatter={monthTickFormatter} />
-          <XAxis
-            dataKey="date"
-            axisLine={false}
-            tickLine={false}
-            interval={0}
-            tick={renderQuarterTick}
-            height={1}
-            scale="band"
-            xAxisId="quarter"
-          />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="Compliant" fill="#82ca9d" />
-          <Bar dataKey="NonCompliant" fill=" #da3832" />
-        </BarChart>
-      </ResponsiveContainer>
-
-      <p style={{ fontSize: "25px", fontWeight: "bolder" }}>
-        compliance rate:{" "}
-        <span style={{ color: "green", fontWeight: "bold" }}>95%</span>
-      </p>
-    </div>
+          {title}
+        </p>{" "}
+        <div className="chartInnerWrapper">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart width={500} height={300} data={data}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="date" tickFormatter={monthTickFormatter} />
+              <XAxis
+                dataKey="date"
+                axisLine={false}
+                tickLine={false}
+                interval={0}
+                tick={renderQuarterTick}
+                height={1}
+                scale="band"
+                xAxisId="quarter"
+              />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="Compliant" fill="#74CDC8" />
+              <Bar dataKey="NonCompliant" fill=" #EFE5A1" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        <p style={{ fontSize: "15px", fontWeight: "bolder" }}>
+          {title}:{" "}
+          <span style={{ color: "green", fontWeight: "bold" }}>95%</span>
+        </p>
+      </div>
+    </>
   );
 }
 
