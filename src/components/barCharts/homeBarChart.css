@@ -1,0 +1,10 @@
+.chartContainer {
+  background: #fff;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border-radius: 8px;
+}
+.chartInnerWrapper {
+  height: 30em;
+}

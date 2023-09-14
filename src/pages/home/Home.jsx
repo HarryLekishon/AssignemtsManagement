@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import HomeBarChart from "../../components/barCharts/HomeBarChart";
-import HomeCard from "../../components/cards/homeCard";
+import HomeCard from "../../components/cards/HomeCard";
 import PieChartBox from "../../components/piechart/PieChartBox";
 import "./home.css";
 
@@ -19,8 +19,8 @@ function Home() {
       <div className="home">
         <p>Welcome, John Doe</p>
         <div className="rateBtn">
-          <button onClick={handleClick}>resolution rate</button>
-          <button onClick={handleClick2}>compliance rate</button>
+          <button onClick={handleClick}>Resolution rate: 95%</button>
+          <button onClick={handleClick2}>Compliance rate: 95%</button>
         </div>
       </div>
 
@@ -39,13 +39,13 @@ function Home() {
             <PieChartBox type=" per ongoing projects" />
           </div>
           <div className="barCharts">
-            {" "}
-            <span ref={ref1}>
+            <div ref={ref1}>
               <HomeBarChart title="Resolution rate" />
-            </span>
-            <span ref={ref2}>
-              <HomeBarChart title="compliance rate" />
-            </span>
+            </div>
+
+            <div ref={ref2}>
+              <HomeBarChart title="Compliance rate" />
+            </div>
           </div>
         </div>
       </div>
