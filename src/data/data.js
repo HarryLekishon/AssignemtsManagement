@@ -69,6 +69,24 @@ export const menu = [
   },
   {
     id: 4,
+    title: "RESOLUTION",
+    listItems: [
+      {
+        id: 1,
+        title: "By Compliance",
+        url: "/",
+        icon: faqIcon,
+      },
+      {
+        id: 1,
+        title: "By Rate",
+        url: "/",
+        icon: faqIcon,
+      },
+    ],
+  },
+  {
+    id: 5,
     title: "SUPPORT",
     listItems: [
       {
