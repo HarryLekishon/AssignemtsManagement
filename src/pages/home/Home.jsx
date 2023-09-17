@@ -172,7 +172,6 @@ function Home() {
       return { projectId, data: projectChartData };
     });
 
-    // Set the project data
     setProjectData(charts);
   }, []);
 
