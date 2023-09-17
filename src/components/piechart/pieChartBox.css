@@ -10,14 +10,7 @@
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent line breaks */
 }
-.projectContainer {
-  width: calc(25% - 10px); /* Display 4 projects per row with some spacing */
-  margin: 10px;
-  flex: 1; /* Ensure equal width for each project */
-  overflow: hidden; /* Hide overflow content */
-  position: relative;
-  
-}
+
 
 .projectContainer .pieChartBox {
   height: 100%;
@@ -27,12 +20,23 @@
   width: 100%;
 }
 
+/* .projectContainer .pieChartBox > h1 {
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+} */
+
 .projectContainer .pieChartBox > h1 {
   text-align: center;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  white-space: normal; /* Allow text to wrap */
+  overflow-wrap: break-word; /* Allow long words to break */
+  width: 100%; /* Ensure the title occupies the full width of the chart */
 }
 
 .projectContainer .chart {
@@ -81,7 +85,6 @@
   border-radius: 8px;
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent line breaks */
-  background-color: yellow;
 }
 
 .projectGroupContainer {
@@ -106,5 +109,61 @@
   display: flex;
 }
 
+.projectGroupContainer {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Define a container for each set of three charts */
+.projectGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: fit-content; /* Adjust the width as needed */
+}
+
+/* Style for each individual chart container */
+.projectContainer {
+  width: calc(33.33% - 10px); /* Display 3 charts per row with some spacing */
+  margin: 10px;
+  flex: 1; /* Ensure equal width for each chart */
+  overflow: hidden; /* Hide overflow content */
+  position: relative;
+}
 
 
+.projectGroupContainer {
+  display: flex;
+  gap: 10px;
+  background: #fff;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  /* Set a maximum width to limit the number of charts displayed at a time */
+  max-width: 100%; /* Adjust this value as needed */
+}
+.projectContainer {
+  width: calc(33.33% - 10px); /* Display 3 charts per row with some spacing */
+  margin: 10px;
+  flex: 1; /* Ensure equal width for each chart */
+  overflow: hidden; /* Hide overflow content */
+  position: relative;
+  min-width: 300px; /* Set a minimum width for each chart container */
+}
+.projectContainer1 {
+  /* Adjust the width to control the size of each chart card */
+  width: 40%; /* Display three charts per row */
+  flex-shrink: 0; /* Prevent charts from shrinking */
+  /* Add other styles as needed for chart cards */
+}

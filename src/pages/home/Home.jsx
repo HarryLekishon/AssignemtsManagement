@@ -68,16 +68,18 @@ function Home() {
       <div className="pieTop">
         <div className="projectScrollContainer">
   {/* Dynamic pie charts for each project */}
-  <div className="projectContainer projectGroupContainer">
-    {projectData.map((project) => (
-      
+  <div className="projectGroupContainer">
+  {projectData.map((project) => (
+    <div className="projectContainer1">
       <PieChartBox
         key={project.projectId}
         type={`Per ${project.projectId}`}
         data={project.data}
       />
-    ))}
-  </div>
+    </div>
+  ))}
+</div>
+
   </div>
 </div>
         <div className="barCharts">
