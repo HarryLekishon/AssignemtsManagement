@@ -1,52 +1,64 @@
 import React from "react";
 import "./reports.css";
 import DataTable from "../../components/datatable/DataTable";
-import { ReportsList } from "../../data/data";
+// import { ReportsList } from "../../data/data";
 import { GridColDef } from "@mui/x-data-grid";
 import DataTable2 from "../../components/datatable/DataTable2";
+import data2 from "../../data/data2";
+
+const filterDataByCategory = () => {
+  return data2.map((item) => item);
+};
+
+const ReportsList = filterDataByCategory();
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
-
   {
-    field: "workOrderNo",
+    field: "work_order_number",
     type: "string",
-    headerName: "Work Order No",
+    headerName: "Service Request",
     width: 150,
   },
   {
-    field: "maintenanceType",
+    field: "work_order_description",
     type: "string",
-    headerName: "MaintenanceType",
-    width: 150,
+    headerName: "Work Order Description",
+    width: 350,
   },
   {
-    field: "appName",
+    field: "acc_id",
     type: "string",
-    headerName: "App Name",
-    width: 250,
+    headerName: "Reported By",
+    width: 200,
   },
   {
-    field: "month",
+    field: "status_id",
     type: "string",
-    headerName: "Month",
+    headerName: "Status",
     width: 80,
   },
   {
-    field: "workOrderStatus",
+    field: "internal_priority",
     type: "string",
-    headerName: "Work Order Status",
-    width: 150,
+    headerName: "Internal Priority",
+    width: 100,
   },
   {
-    field: "within",
-    type: "string",
-    headerName: "Within",
+    field: "source",
+    headerName: "Source",
     width: 75,
+    type: "string",
   },
   {
-    field: "unit",
+    field: "severity_id",
+    headerName: "Severity",
+    width: 100,
     type: "string",
-    headerName: "Unit",
+  },
+  {
+    field: "date_completed",
+    type: "string",
+    headerName: "Date Completed",
     width: 150,
   },
 ];
