@@ -1,37 +1,45 @@
 import React from "react";
 import "./complaints.css";
 import { GridColDef } from "@mui/x-data-grid";
-import { CustomerComplaints } from "../../data/data";
+// import { CustomerComplaints } from "../../data/data";
 import DataTable from "../../components/datatable/DataTable";
+import data2 from "../../data/data2";
+
+const filterDataByCategory = (category) => {
+  return data2.filter((item) => item.cat_id === category);
+};
+
+const CustomerComplaints = filterDataByCategory("Complaint");
+console.log("here here " + CustomerComplaints);
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
 
   {
-    field: "serviceRequest",
+    field: "work_order_number",
     type: "string",
-    headerName: "Service Requests",
+    headerName: "Service Request",
     width: 150,
   },
   {
-    field: "classDescription",
+    field: "work_order_description",
     type: "string",
-    headerName: "Class Description",
-    width: 150,
+    headerName: "Work Order Description",
+    width: 300,
   },
   {
-    field: "details",
+    field: "acc_id",
     type: "string",
-    headerName: "Details",
-    width: 250,
+    headerName: "Reported By",
+    width: 200,
   },
   {
-    field: "status",
+    field: "status_id",
     type: "string",
     headerName: "Status",
     width: 80,
   },
   {
-    field: "internalPriority",
+    field: "internal_priority",
     type: "string",
     headerName: "Internal Priority",
     width: 150,
@@ -43,10 +51,16 @@ const columns: GridColDef[] = [
     type: "string",
   },
   {
-    field: "summary",
-    headerName: "Summary",
-    width: 350,
+    field: "severity_id",
+    headerName: "Severity",
+    width: 100,
     type: "string",
+  },
+  {
+    field: "date_completed",
+    type: "string",
+    headerName: "Date Completed",
+    width: 150,
   },
 ];
 
