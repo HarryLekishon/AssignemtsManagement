@@ -10,7 +10,7 @@ const filterDataByCategory = (category) => {
 };
 
 const CustomerComplaints = filterDataByCategory("Complaint");
-console.log("here here " + CustomerComplaints);
+
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
 
