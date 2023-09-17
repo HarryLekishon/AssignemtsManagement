@@ -179,7 +179,13 @@ function Home() {
   return (
     <div className="homecontainer">
     <div className="home">
-      {/* ... (rest of your code remains the same) */}
+ 
+      <p>Welcome, John Doe</p>
+       <div className="rateBtn">
+         <button onClick={handleClick}>Resolution rate: 95%</button>
+          <button onClick={handleClick2}>Compliance rate: 95%</button>
+    
+    </div>
     </div>
 
     <div className="grid">
