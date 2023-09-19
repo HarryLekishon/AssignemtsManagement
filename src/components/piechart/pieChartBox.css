@@ -1,17 +1,3 @@
- .pieTop {
-
-  display: flex;
-  gap: 15px;
-  background: #fff;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  border-radius: 8px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent line breaks */
-}
-
-
 .projectContainer .pieChartBox {
   height: 100%;
   display: flex;
@@ -49,54 +35,46 @@
 
 /* Add more styles for the chart if needed */
 
-.projectContainer .options {
+.options {
   display: flex;
-  flex-direction: column;
+  gap: 15px;
   font-size: 14px;
-  align-items: flex-start;
 }
 
-.projectContainer .option {
+.option {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
 }
-
-.projectContainer .title {
+.option {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   align-items: center;
 }
+.optionTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.optionTitle > p {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.optionValue {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
 
-.projectContainer .dot {
+.dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
 }
 
-.projectScrollContainer{
-  display: flex;
-  gap: 15px;
-  background: #fff;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  border-radius: 8px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent line breaks */
-}
-
 .projectGroupContainer {
-  display: flex;
-  gap: 15px;
-  background: #fff;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  border-radius: 8px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent l */
 }
 .chart {
   display: flex;
@@ -107,18 +85,7 @@
 }
 .pieChartContainer {
   display: flex;
-}
-
-.projectGroupContainer {
-  display: flex;
-  gap: 15px;
-  background: #fff;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  border-radius: 8px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent line breaks */
+  flex-direction: column;
 }
 
 /* Define a container for each set of three charts */
@@ -130,31 +97,7 @@
   width: fit-content; /* Adjust the width as needed */
 }
 
-/* Style for each individual chart container */
 .projectContainer {
-  width: calc(33.33% - 10px); /* Display 3 charts per row with some spacing */
-  margin: 10px;
-  flex: 1; /* Ensure equal width for each chart */
-  overflow: hidden; /* Hide overflow content */
-  position: relative;
-}
-
-
-.projectGroupContainer {
-  display: flex;
-  gap: 10px;
-  background: #fff;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  border-radius: 8px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent line breaks */
-  /* Set a maximum width to limit the number of charts displayed at a time */
-  max-width: 100%; /* Adjust this value as needed */
-}
-.projectContainer {
-  width: calc(33.33% - 10px); /* Display 3 charts per row with some spacing */
   margin: 10px;
   flex: 1; /* Ensure equal width for each chart */
   overflow: hidden; /* Hide overflow content */

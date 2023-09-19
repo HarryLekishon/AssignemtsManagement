@@ -34,7 +34,9 @@ function Home() {
 
     // Create chart data for each project
     const charts = uniqueProjectIds.map((projectId) => {
-      const projectChartData = data2.filter((item) => item.app_id === projectId);
+      const projectChartData = data2.filter(
+        (item) => item.app_id === projectId
+      );
       return { projectId, data: projectChartData };
     });
 
@@ -44,57 +46,49 @@ function Home() {
 
   return (
     <div className="homecontainer">
-    <div className="home">
- 
-      <p>Welcome, John Doe</p>
-       <div className="rateBtn">
-         <button onClick={handleClick}>Resolution rate: 95%</button>
+      <div className="home">
+        <p>Welcome, John Doe</p>
+        <div className="rateBtn">
+          <button onClick={handleClick}>Resolution rate: 95%</button>
           <button onClick={handleClick2}>Compliance rate: 95%</button>
-    
-    </div>
-    </div>
-
-    <div className="grid">
-      <HomeCard />
-    </div>
-    <div className="chartsBox">
-      <div className="chartTop">
-        {/* Static pie charts */}
-        <PieChartBox type="Per Category" data={data2} />
-        <PieChartBox type="By Status" data={data2} />
+        </div>
       </div>
-      <div className="chartBottom">
 
-      <div className="pieTop">
-        <div className="projectScrollContainer">
-  {/* Dynamic pie charts for each project */}
-  <div className="projectGroupContainer">
-  {projectData.map((project) => (
-    <div className="projectContainer1">
-      <PieChartBox
-        key={project.projectId}
-        type={`Per ${project.projectId}`}
-        data={project.data}
-      />
-    </div>
-  ))}
-</div>
-
-  </div>
-</div>
-        <div className="barCharts">
-          <div ref={ref1}>
-            <HomeBarChart title="Resolution rate" />
+      <div className="grid">
+        <HomeCard />
+      </div>
+      <div className="chartsBox">
+        <div className="chartTop">
+          {/* Static pie charts */}
+          <PieChartBox type="Per Category" data={data2} />
+          <PieChartBox type="By Status" data={data2} />
+        </div>
+        <div className="chartBottom">
+          <div className="pieTop">
+            {/* Dynamic pie charts for each project */}
+            {projectData.map((project) => (
+              <div className="projectContainer1">
+                <PieChartBox
+                  key={project.projectId}
+                  type={`Per ${project.projectId}`}
+                  data={project.data}
+                />
+              </div>
+            ))}
           </div>
+          <div className="barCharts">
+            <div ref={ref1}>
+              <HomeBarChart title="Resolution rate" />
+            </div>
 
-          <div ref={ref2}>
-            <HomeBarChart title="Compliance rate" />
+            <div ref={ref2}>
+              <HomeBarChart title="Compliance rate" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default Home;

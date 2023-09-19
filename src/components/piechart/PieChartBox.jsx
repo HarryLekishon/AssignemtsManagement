@@ -1,6 +1,6 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
-import "./PieChartBox.css";
+import "./pieChartBox.css";
 import PropTypes from "prop-types";
 
 const PieChartBox = ({ type, data }) => {
@@ -83,42 +83,45 @@ const PieChartBox = ({ type, data }) => {
   }
 
   return (
-    <div className="projectContainer">
-    <div className="pieChartBox">
-      <h1>Issue Resolution {type}</h1>
-      <div className="pieChartContainer">
-        <div className="chart">
-          <ResponsiveContainer width="99%" height={300}>
-            <PieChart>
-              <Tooltip
-                contentStyle={{ background: "white", borderRadius: "5px" }}
-              />
-              <Pie
-                data={chartData}
-                innerRadius={"70%"}
-                outerRadius={"90%"}
-                paddingAngle={5}
-                dataKey="value"
-              >
-                {chartData.map((item) => (
-                  <Cell key={item.name} fill={item.color} />
-                ))}
-              </Pie>
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
-        <div className="options">
-          {chartData.map((item) => (
-            <div className="option" key={item.name}>
-              <div className="title">
-                <div className="dot" style={{ background: item.color }} />
-                <span>{`${item.name}: ${item.value}`}</span>
+    <div className="projectInnerContainer">
+      <div className="pieChartBox">
+        <h1>Issue Resolution {type}</h1>
+        <div className="pieChartContainer">
+          <div className="chart">
+            <ResponsiveContainer width="99%" height={300}>
+              <PieChart>
+                <Tooltip
+                  contentStyle={{ background: "white", borderRadius: "5px" }}
+                />
+                <Pie
+                  data={chartData}
+                  innerRadius={"70%"}
+                  outerRadius={"90%"}
+                  paddingAngle={5}
+                  dataKey="value"
+                >
+                  {chartData.map((item) => (
+                    <Cell key={item.name} fill={item.color} />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="options">
+            {chartData.map((item) => (
+              <div className="option" key={item.name}>
+                <div className="optionTitle">
+                  <div className="dot" style={{ background: item.color }} />
+                  <p>
+                    {item.name}
+                    <span className="optionValue">: {item.value}</span>
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
