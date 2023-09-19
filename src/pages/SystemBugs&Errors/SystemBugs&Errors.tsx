@@ -2,8 +2,15 @@ import { GridColDef } from "@mui/x-data-grid";
 import "./systemBugs&Errors.css";
 
 import React from "react";
-import { SysBugs } from "../../data/data";
+// import { SysBugs } from "../../data/data";
 import DataTable from "../../components/datatable/DataTable";
+import data2 from "../../data/data2";
+
+const filterDataByCategory = (category) => {
+  return data2.filter((item) => item.cat_id === category);
+};
+
+const SysBugs = filterDataByCategory("Bug");
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
@@ -15,41 +22,52 @@ const columns: GridColDef[] = [
     width: 150,
   },
   {
-    field: "summary",
+    field: "work_order_number",
     type: "string",
-    headerName: "Summary",
-    width: 350,
-  },
-  {
-    field: "component",
-    type: "string",
-    headerName: "Component",
+    headerName: "Service Request",
     width: 150,
   },
   {
-    field: "status",
+    field: "work_order_description",
+    type: "string",
+    headerName: "Work Order Description",
+    width: 350,
+  },
+  {
+    field: "acc_id",
+    type: "string",
+    headerName: "Reported By",
+    width: 200,
+  },
+  {
+    field: "status_id",
     type: "string",
     headerName: "Status",
     width: 80,
   },
   {
-    field: "resolution",
+    field: "internal_priority",
     type: "string",
-    headerName: "Resolution",
-    width: 250,
-  },
-
-  {
-    field: "reporter",
-    type: "string",
-    headerName: "Reporter",
-    width: 150,
+    headerName: "Internal Priority",
+    width: 100,
   },
   {
-    field: "priority",
-    type: "string",
-    headerName: "Priority",
+    field: "source",
+    headerName: "Source",
     width: 75,
+    type: "string",
+  },
+  {
+    field: "severity_id",
+    headerName: "Severity",
+    width: 100,
+    type: "string",
+  },
+  {
+    field: "date_completed",
+    type: "string",
+    headerName: "Date Completed",
+    width: 150,
   },
 ];
 
