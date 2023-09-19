@@ -1,53 +1,67 @@
 import React from "react";
 import "./serviceRequests.css";
 import { GridColDef } from "@mui/x-data-grid";
-import { ServiceReqs } from "../../data/data";
+// import { ServiceReqs } from "../../data/data";
 import DataTable from "../../components/datatable/DataTable";
+
+import data2 from "../../data/data2";
+
+const filterDataByCategory = (category) => {
+  return data2.filter((item) => item.cat_id === category);
+};
+
+const ServiceReqs = filterDataByCategory("Service request");
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
 
   {
-    field: "serviceRequest",
+    field: "work_order_number",
     type: "string",
     headerName: "Service Request",
     width: 150,
   },
   {
-    field: "classDescription",
+    field: "work_order_description",
     type: "string",
-    headerName: "Class Description",
-    width: 150,
+    headerName: "Work Order Description",
+    width: 350,
   },
   {
-    field: "details",
+    field: "acc_id",
     type: "string",
-    headerName: "Details",
-    width: 250,
+    headerName: "Reported By",
+    width: 200,
   },
   {
-    field: "status",
+    field: "status_id",
     type: "string",
     headerName: "Status",
     width: 80,
   },
   {
-    field: "internalPriority",
+    field: "internal_priority",
     type: "string",
     headerName: "Internal Priority",
-    width: 150,
+    width: 100,
   },
   {
     field: "source",
-    type: "string",
     headerName: "Source",
     width: 75,
+    type: "string",
   },
   {
-    field: "summary",
+    field: "severity_id",
+    headerName: "Severity",
+    width: 100,
     type: "string",
-    headerName: "Summary",
-    width: 350,
+  },
+  {
+    field: "date_completed",
+    type: "string",
+    headerName: "Date Completed",
+    width: 150,
   },
 ];
 function ServiceRequests() {
