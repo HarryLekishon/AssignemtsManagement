@@ -6,6 +6,12 @@ import enhanceIcon from "../assets/icons/enhancement.svg";
 import reportIcon from "../assets/icons/report.svg";
 import faqIcon from "../assets/icons/help.svg";
 
+export const newReqColor = "#FFA559C2";
+export const pendReqColor = "#F6635C75";
+export const overdueReqColor = "#D713137A";
+export const closedReqColor = "#45FFCAF2";
+export const totalReqColor = "#62B2FD75";
+
 export const menu = [
   {
     id: 1,
@@ -41,14 +47,14 @@ export const menu = [
         url: "/service-requests",
         icon: requestsIcon,
       },
+      // {
+      //   id: 3,
+      //   title: "System Bugs & Errors",
+      //   url: "/system-bugs-&-errors",
+      //   icon: bugsIcon,
+      // },
       {
         id: 3,
-        title: "System Bugs & Errors",
-        url: "/system-bugs-&-errors",
-        icon: bugsIcon,
-      },
-      {
-        id: 4,
         title: "System Enhancements",
         url: "/system-enhancements",
         icon: enhanceIcon,

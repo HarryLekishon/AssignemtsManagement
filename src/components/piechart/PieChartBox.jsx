@@ -2,9 +2,21 @@ import { useEffect, useState } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import "./pieChartBox.css";
 import PropTypes from "prop-types";
+import {
+  closedReqColor,
+  newReqColor,
+  overdueReqColor,
+  pendReqColor,
+} from "../../data/data";
 
 const PieChartBox = ({ type, data }) => {
   const [chartData, setChartData] = useState([]);
+  const statusColors = {
+    Closed: closedReqColor,
+    New: newReqColor,
+    Pending: pendReqColor,
+    Overdue: overdueReqColor,
+  };
 
   useEffect(() => {
     if (type === "Per Category" && data) {
@@ -34,7 +46,7 @@ const PieChartBox = ({ type, data }) => {
         ([status, count]) => ({
           name: status,
           value: count,
-          color: getRandomColor(),
+          color: statusColors[status],
         })
       );
 
@@ -47,12 +59,7 @@ const PieChartBox = ({ type, data }) => {
       const filteredData = data.filter((item) => item.app_id === projectId);
 
       // Calculate counts for different statuses
-      const statusCounts = {
-        new: 0,
-        closed: 0,
-        pending: 0,
-        // Add more statuses as needed
-      };
+      const statusCounts = {};
 
       filteredData.forEach((item) => {
         const status = item.status_id;
@@ -64,7 +71,7 @@ const PieChartBox = ({ type, data }) => {
         ([status, count]) => ({
           name: status,
           value: count,
-          color: getRandomColor(),
+          color: statusColors[status],
         })
       );
 

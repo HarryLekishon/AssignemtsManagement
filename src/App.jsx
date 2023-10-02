@@ -45,10 +45,10 @@ function App() {
           path: "/service-requests",
           element: <ServiceRequests />,
         },
-        {
-          path: "/system-bugs-&-errors",
-          element: <SystemBugsErrors />,
-        },
+        // {
+        //   path: "/system-bugs-&-errors",
+        //   element: <SystemBugsErrors />,
+        // },
         {
           path: "/system-enhancements",
           element: <SystemEnhancements />,
