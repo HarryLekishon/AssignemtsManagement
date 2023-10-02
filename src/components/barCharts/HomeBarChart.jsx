@@ -143,8 +143,8 @@ function HomeBarChart({ title }) {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar dataKey="Compliant" fill="#74CDC8" />
-              <Bar dataKey="NonCompliant" fill=" #EFE5A1" />
+              <Bar dataKey="Compliant" fill="#4EFFCD" />
+              <Bar dataKey="NonCompliant" fill=" #FBB7B4" />
             </BarChart>
           </ResponsiveContainer>
         </div>
