@@ -107,7 +107,7 @@
 }
 .projectContainer1 {
   /* Adjust the width to control the size of each chart card */
-  width: 50%; /* Display three charts per row */
+  width: 30%; /* Display three charts per row */
   flex-shrink: 0; /* Prevent charts from shrinking */
   /* Add other styles as needed for chart cards */
   border: 1px solid #d0d0d0;
