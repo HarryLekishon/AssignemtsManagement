@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
 import "./menu.css";
 function Menu() {
   return (
     <div className="menu">
-      <button type="submit" className="logoutBtn">
-        Logout
-      </button>
+      <span  className="logoutBtn">
+
+        <Link to="/login" type="submit" >
+          Logout
+        </Link>
+      </span>
     </div>
   );
 }

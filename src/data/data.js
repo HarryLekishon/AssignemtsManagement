@@ -1,17 +1,16 @@
 import dashIcon from "../assets/icons/Group.svg";
 import compaintsIcon from "../assets/icons/complaints.svg";
 import requestsIcon from "../assets/icons/serv-requests.svg";
-import bugsIcon from "../assets/icons/bugs.svg";
 import enhanceIcon from "../assets/icons/enhancement.svg";
 import reportIcon from "../assets/icons/report.svg";
 import faqIcon from "../assets/icons/help.svg";
 
-export const newReqColor = "#FFA559C2";
-export const pendReqColor = "#F6635C75";
-export const overdueReqColor = "#D713137A";
-export const closedReqColor = "#45FFCAF2";
-export const totalReqColor = "#62B2FD75";
-
+export const newReqColor = "#219d8087";
+export const pendReqColor = "#219d8087";
+export const overdueReqColor = "#219d8087";
+export const closedReqColor = "#219d8087";
+export const totalReqColor = "#219d8087";
+// #219d8096
 export const menu = [
   {
     id: 1,

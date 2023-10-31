@@ -1,5 +1,5 @@
 import "./navbar.css";
-import kralogo from "../../assets/KRA.svg";
+import iTrackerlogo from "../../assets/i-tracker.svg";
 import { NavLink } from "react-router-dom";
 import { menu } from "../../data/data";
 
@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <div className="nav">
       <div className="top">
-        <img src={kralogo} alt="kra-logo" className="nav-logo" />
+        <img src={iTrackerlogo} alt="kra-logo" className="nav-logo" />
       </div>
       <div className="bottom">
         <div className="linkContainer">

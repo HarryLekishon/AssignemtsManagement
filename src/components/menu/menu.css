@@ -7,11 +7,15 @@
 
 .logoutBtn {
   margin: 0 10px;
-  /* padding: 5px; */
+  padding: 5px;
   border: none;
   border-radius: 5px;
+  display: flex;
   width: 100px;
+  background: white;
   height: 30px;
+  justify-content: center;
   font-weight: bold;
   cursor: pointer;
+  align-items: center;
 }

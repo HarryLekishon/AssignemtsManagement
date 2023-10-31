@@ -2,6 +2,7 @@ import "./login.css";
 import waves from "../../assets/Vectors.svg";
 import logo from "../../assets/logo-group.svg";
 import Inputs from "./Inputs";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -16,7 +17,11 @@ function Login() {
             <div className="inputs">
               <Inputs />
             </div>
-            <button className="loginBtn">Login</button>
+
+            <Link to="/" className="loginBtn">
+              Login
+            </Link>
+
           </form>
         </div>
         <div className="right">

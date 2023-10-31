@@ -16,7 +16,7 @@
   justify-content: center;
 }
 .nav-logo {
-  width: 90%;
+  width: 70%;
   padding: 40px 0 0 0;
 }
 .bottom {
@@ -50,6 +50,6 @@
   line-height: normal;
 }
 .item > a:hover {
-  background-color: #f6635cb2;
+  background-color: #219d80;
   color: white;
 }
