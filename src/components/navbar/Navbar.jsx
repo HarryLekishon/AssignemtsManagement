@@ -1,5 +1,5 @@
 import "./navbar.css";
-import iTrackerlogo from "../../assets/i-tracker.svg";
+import iTrackerlogo from "../../assets/i-Tracker.svg";
 import { NavLink } from "react-router-dom";
 import { menu } from "../../data/data";
 
